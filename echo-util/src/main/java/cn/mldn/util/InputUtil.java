@@ -7,6 +7,9 @@ import java.io.InputStreamReader;
 public class InputUtil {
     private static final BufferedReader KEYBOARD_INPUT = new BufferedReader(new InputStreamReader(System.in));
 
+    /**
+     * 这里采用私有构造方法，jvm便不会自动执行构造方法，进行创建实例，因为我们没必要创建实例，也就不用gc忙活了
+     */
     private InputUtil() {
     }
 
