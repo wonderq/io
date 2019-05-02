@@ -45,7 +45,7 @@ public class BIOEchoServer {
             while(this.flag) {
                 if (this.scanner.hasNext()) {   // 现在有数据进行输入
                     String val = this.scanner.next().trim() ; // 去掉多余的空格内容
-                    System.err.println("{服务器端}" + val);
+                    System.out.println("{服务器端}" + val);
                     if("byebye".equalsIgnoreCase(val)) {
                         this.out.println("ByeByeByte...");
                         this.flag = false ;
@@ -59,6 +59,7 @@ public class BIOEchoServer {
             try {
                 this.client.close();
             } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }
