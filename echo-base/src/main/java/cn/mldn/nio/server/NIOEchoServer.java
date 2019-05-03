@@ -27,7 +27,7 @@ public class NIOEchoServer {
             try {
                 while(this.flag) {  // 需要不断进行交互
                     buffer.clear() ;    // 清空缓冲区
-                    int readCount = this.clientChannel.read(buffer) ; // 从缓冲区之中读取数据
+                    int readCount = this.clientChannel.read(buffer) ; // 向缓冲区之中读取数据
                     String readMessage = new String(buffer.array(),0,readCount).trim() ;
                     String writeMessage = "【ECHO】" + readMessage + "\n" ; // 回应数据信息
                     if("byebye".equalsIgnoreCase(readMessage)) {
