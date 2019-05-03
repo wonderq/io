@@ -50,7 +50,7 @@ public class BIOEchoServer {
                         this.out.println("ByeByeByte...");
                         this.flag = false ;
                     } else {
-                        out.println("【ECHO】" + val);
+                        out.println("[ECHO]" + val);
                     }
                 }
             }
